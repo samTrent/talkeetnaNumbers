@@ -10,21 +10,17 @@ admin.initializeApp({
 });
 
 
-
-
-
-
-
-
 function getAllData(request, responce)
 {
   var stuff;
 
   admin.database().ref("/").on("value", function(snapshot)
   {
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
 
-     stuff = {data: snapshot.val()};
+     data = {data: snapshot.val().users};
+     
+
 
   }, function (errorObject)
   {
@@ -34,7 +30,7 @@ function getAllData(request, responce)
 
 
 
-  responce.render('results', stuff);
+  responce.render('results', data);
 }
 
 

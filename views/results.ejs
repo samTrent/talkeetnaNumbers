@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <h1>Results</h1>
+  <body style="background-color: blue">
+    <h1 style="color: white">Results</h1>
 
-    <p><%= data%></p>
+    <table>
+<% for(var i=0; i < data; i++) { %>
+<tr>
+ <td><%= data[i]%></td>
+ </tr>
+<% } %>
+</table>
 
   </body>
 </html>
